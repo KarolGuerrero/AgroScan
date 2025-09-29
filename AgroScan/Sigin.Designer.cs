@@ -1,6 +1,6 @@
 ﻿namespace AgroScan
 {
-    partial class Form2
+    partial class Sigin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sigin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.PictureBox();
+            this.btncerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textCorreo = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtcontrasena = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -38,9 +42,9 @@
             this.btnSingin = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textCorreo = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +53,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.btnMinimize);
+            this.panel1.Controls.Add(this.btncerrar);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -56,6 +62,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(890, 530);
             this.panel1.TabIndex = 1;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimize.BackgroundImage")));
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Location = new System.Drawing.Point(787, 12);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(35, 37);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMinimize.TabIndex = 15;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btncerrar
+            // 
+            this.btncerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btncerrar.BackgroundImage")));
+            this.btncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncerrar.Location = new System.Drawing.Point(838, 12);
+            this.btncerrar.Name = "btncerrar";
+            this.btncerrar.Size = new System.Drawing.Size(40, 33);
+            this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btncerrar.TabIndex = 14;
+            this.btncerrar.TabStop = false;
+            this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
             // panel2
             // 
@@ -76,6 +106,30 @@
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(253)))), ((int)(((byte)(233)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Candara", 13.8F);
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(378, 188);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(300, 36);
+            this.textBox1.TabIndex = 14;
+            this.textBox1.Text = "  Confirmar contraseña";
+            // 
+            // textCorreo
+            // 
+            this.textCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(253)))), ((int)(((byte)(233)))));
+            this.textCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textCorreo.Font = new System.Drawing.Font("Candara", 13.8F);
+            this.textCorreo.ForeColor = System.Drawing.Color.Black;
+            this.textCorreo.Location = new System.Drawing.Point(378, 122);
+            this.textCorreo.Name = "textCorreo";
+            this.textCorreo.Size = new System.Drawing.Size(300, 36);
+            this.textCorreo.TabIndex = 13;
+            this.textCorreo.Text = "  Correo electrónico";
+            // 
             // linkLabel1
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.MediumAquamarine;
@@ -89,6 +143,7 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Iniciar sesión";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.White;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // txtcontrasena
             // 
@@ -164,40 +219,18 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // textCorreo
-            // 
-            this.textCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(253)))), ((int)(((byte)(233)))));
-            this.textCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textCorreo.Font = new System.Drawing.Font("Candara", 13.8F);
-            this.textCorreo.ForeColor = System.Drawing.Color.Black;
-            this.textCorreo.Location = new System.Drawing.Point(378, 122);
-            this.textCorreo.Name = "textCorreo";
-            this.textCorreo.Size = new System.Drawing.Size(300, 36);
-            this.textCorreo.TabIndex = 13;
-            this.textCorreo.Text = "  Correo electrónico";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(253)))), ((int)(((byte)(233)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Candara", 13.8F);
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(378, 188);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 36);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.Text = "  Confirmar contraseña";
-            // 
-            // Form2
+            // Sigin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 530);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
+            this.Name = "Sigin";
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -218,5 +251,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textCorreo;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox btncerrar;
+        private System.Windows.Forms.PictureBox btnMinimize;
     }
 }

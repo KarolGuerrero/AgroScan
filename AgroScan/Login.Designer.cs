@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualBasic.PowerPacks;
 namespace AgroScan
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,18 +29,22 @@ namespace AgroScan
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.PictureBox();
+            this.btncerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkolvcontrasena = new System.Windows.Forms.LinkLabel();
+            this.txtcontrasena = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtcontrasena = new System.Windows.Forms.TextBox();
-            this.linkolvcontrasena = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,13 +53,39 @@ namespace AgroScan
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.btnMinimize);
+            this.panel1.Controls.Add(this.btncerrar);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(890, 530);
+            this.panel1.Size = new System.Drawing.Size(890, 534);
             this.panel1.TabIndex = 0;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimize.BackgroundImage")));
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Location = new System.Drawing.Point(794, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(35, 37);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMinimize.TabIndex = 13;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btncerrar
+            // 
+            this.btncerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btncerrar.BackgroundImage")));
+            this.btncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncerrar.Location = new System.Drawing.Point(847, 3);
+            this.btncerrar.Name = "btncerrar";
+            this.btncerrar.Size = new System.Drawing.Size(40, 33);
+            this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btncerrar.TabIndex = 13;
+            this.btncerrar.TabStop = false;
+            this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
             // panel2
             // 
@@ -74,6 +104,48 @@ namespace AgroScan
             this.panel2.Size = new System.Drawing.Size(631, 352);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.MediumAquamarine;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(365, 290);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(173, 24);
+            this.linkLabel1.TabIndex = 12;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Crear nueva cuenta";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.White;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linkolvcontrasena
+            // 
+            this.linkolvcontrasena.ActiveLinkColor = System.Drawing.Color.MediumAquamarine;
+            this.linkolvcontrasena.AutoSize = true;
+            this.linkolvcontrasena.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkolvcontrasena.LinkColor = System.Drawing.Color.White;
+            this.linkolvcontrasena.Location = new System.Drawing.Point(89, 290);
+            this.linkolvcontrasena.Name = "linkolvcontrasena";
+            this.linkolvcontrasena.Size = new System.Drawing.Size(223, 24);
+            this.linkolvcontrasena.TabIndex = 11;
+            this.linkolvcontrasena.TabStop = true;
+            this.linkolvcontrasena.Text = "¿Olvidaste tu contraseña?";
+            this.linkolvcontrasena.VisitedLinkColor = System.Drawing.Color.White;
+            this.linkolvcontrasena.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkolvcontrasena_LinkClicked);
+            // 
+            // txtcontrasena
+            // 
+            this.txtcontrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(253)))), ((int)(((byte)(233)))));
+            this.txtcontrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtcontrasena.Font = new System.Drawing.Font("Candara", 13.8F);
+            this.txtcontrasena.ForeColor = System.Drawing.Color.Black;
+            this.txtcontrasena.Location = new System.Drawing.Point(173, 176);
+            this.txtcontrasena.Name = "txtcontrasena";
+            this.txtcontrasena.Size = new System.Drawing.Size(300, 36);
+            this.txtcontrasena.TabIndex = 10;
+            this.txtcontrasena.Text = "  Contraseña";
             // 
             // txtUsuario
             // 
@@ -111,6 +183,7 @@ namespace AgroScan
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Iniciar Sesión";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // textBox2
             // 
@@ -137,57 +210,18 @@ namespace AgroScan
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // txtcontrasena
-            // 
-            this.txtcontrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(253)))), ((int)(((byte)(233)))));
-            this.txtcontrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtcontrasena.Font = new System.Drawing.Font("Candara", 13.8F);
-            this.txtcontrasena.ForeColor = System.Drawing.Color.Black;
-            this.txtcontrasena.Location = new System.Drawing.Point(173, 176);
-            this.txtcontrasena.Name = "txtcontrasena";
-            this.txtcontrasena.Size = new System.Drawing.Size(300, 36);
-            this.txtcontrasena.TabIndex = 10;
-            this.txtcontrasena.Text = "  Contraseña";
-            // 
-            // linkolvcontrasena
-            // 
-            this.linkolvcontrasena.ActiveLinkColor = System.Drawing.Color.MediumAquamarine;
-            this.linkolvcontrasena.AutoSize = true;
-            this.linkolvcontrasena.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkolvcontrasena.LinkColor = System.Drawing.Color.White;
-            this.linkolvcontrasena.Location = new System.Drawing.Point(89, 290);
-            this.linkolvcontrasena.Name = "linkolvcontrasena";
-            this.linkolvcontrasena.Size = new System.Drawing.Size(223, 24);
-            this.linkolvcontrasena.TabIndex = 11;
-            this.linkolvcontrasena.TabStop = true;
-            this.linkolvcontrasena.Text = "¿Olvidaste tu contraseña?";
-            this.linkolvcontrasena.VisitedLinkColor = System.Drawing.Color.White;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.MediumAquamarine;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(365, 290);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(173, 24);
-            this.linkLabel1.TabIndex = 12;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Crear nueva cuenta";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.White;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 529);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -207,6 +241,8 @@ namespace AgroScan
         private System.Windows.Forms.TextBox txtcontrasena;
         private System.Windows.Forms.LinkLabel linkolvcontrasena;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.PictureBox btncerrar;
+        private System.Windows.Forms.PictureBox btnMinimize;
     }
 }
 
