@@ -66,7 +66,9 @@ namespace AgroScan
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            Principal f4 = new Principal(); // Paso el dato por constructor
+            f4.Show();
+            this.Hide();
         }
 
         private void linkolvcontrasena_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -75,6 +77,8 @@ namespace AgroScan
             f3.Show();
             this.Hide();
         }
+
+
     }
 }
     

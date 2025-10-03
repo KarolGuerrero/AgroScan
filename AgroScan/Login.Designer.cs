@@ -1,4 +1,7 @@
 ﻿using Microsoft.VisualBasic.PowerPacks;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 namespace AgroScan
 {
     partial class Login
@@ -57,10 +60,10 @@ namespace AgroScan
             this.panel1.Controls.Add(this.btncerrar);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(890, 534);
+            this.panel1.Size = new System.Drawing.Size(890, 529);
             this.panel1.TabIndex = 0;
             // 
             // btnMinimize
@@ -89,6 +92,10 @@ namespace AgroScan
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(36)))));
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.linkolvcontrasena);
@@ -220,6 +227,7 @@ namespace AgroScan
             this.Name = "Login";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -228,6 +236,8 @@ namespace AgroScan
             this.ResumeLayout(false);
 
         }
+
+
 
         #endregion
 
